@@ -1,0 +1,25 @@
+CREATE TABLE Cliente(
+idCliente int not null primary key,
+nombrecliente varchar not null,
+direccionInicio varchar not null,
+directorioDestino varchar not null
+);
+
+CREATE TABLE Conductor(
+idconductor int not null primary key,
+nombreconductor varchar(10) not null,
+ubicacion varchar(15) not null,
+disponivilidad varchar(15) not null
+);
+CREATE TABLE detlleDeservicio(
+iddetalle int not null primary key,
+fechaDeServicio time not null,
+CantidadClientes int not null
+);
+
+ALTER TABLE detlleDeservicio
+ADD COLUMN precio int NOT NULL;
+
+ALTER TABLE Conductor
+MODIFY ubicacion CHAR NOT NULL;
+
